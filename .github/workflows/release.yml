@@ -27,3 +27,4 @@ jobs:
         repository-url: https://test.pypi.org/legacy/
         password: ${{ secrets.TESTPYPI_API_TOKEN }}
         packages-dir: packaging_tutorial/dist
+        verbose: true
