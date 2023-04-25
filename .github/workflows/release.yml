@@ -8,6 +8,11 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/project/example-package-daemo/
+    permissions:
+      id-token: write
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -25,6 +30,4 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
-        password: ${{ secrets.TESTPYPI_API_TOKEN }}
         packages-dir: packaging_tutorial/dist
-        verbose: true
