@@ -1,8 +1,8 @@
-from example_package_daemo import main as daemo_main
+from sample.simple import add_one
 
 
 def main():
-    print(daemo_main.add_one(2))
+    print(add_one(2))
 
 
 if __name__ == '__main__':

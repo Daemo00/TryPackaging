@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-and-publish:
+    if: github.event_name == 'push' && startsWith(github.event.head_commit.message, '[REL]')
     runs-on: ubuntu-latest
     environment:
       name: testpypi
