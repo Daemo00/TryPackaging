@@ -1,0 +1,3 @@
+[submodule "packaging_tutorial"]
+	path = packaging_tutorial
+	url = git@github.com:Daemo00/packaging_tutorial.git
